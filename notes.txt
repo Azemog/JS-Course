@@ -1,0 +1,70 @@
+console.log(typeof <zmienna>) - sprawdzić typ zmiennej
+favColor1.toUpperCase()
+.toFixed(2) - zaokragla nam liczbe do 2 miejsc po przecinku
+parseInt(<jakis string>)
+
+for(<nazwa zmiennej> of <nazwa tablicy>) - dla tablic
+for(<nazwa zmiennej> in <nazwa obiektu>) - dla obiektów
+<array>.unshift(100,200) - dodaje dwa elementy na poczatek tablicy
+<array>.shift() - usuwa element na indeksie 0 z tablicy
+<array>.push() - dodaje element na koniec tablicy
+<array>.pop() - usuwa ostatni element z tablicy
+<array>.map(<function>) - dla kazdego elementu tablicy wywoluje podaja w parametrze fukcje, map zwraca nowa tablice
+metody destrukcyjne: takie które wplywaja na orginalny element np push na tablice
+metody niedestrukcyjna: takie ktore na wplywaja na orginalny element np concat
+
+spread - (...<array>) - rozwala tablice na pojedyczne elementy/ mozna uzywac zamiast concat
+callback - parametr funkcji, która jest funkcją
+paremetry podajemy podczas tworzenia funkcji
+argumenty podajemy podczas wywoływania funkcji
+
+rest - function a (a,b, ...z) - jesli w czasie wywowalnia funkcji podano wiecej argumentow niz paramaterow posiada funkcja to wtedy reszta za pomoca rest jest łączona w tablicę
+
+getElementBy coś : wspierają żywe kolekcje, czyli np dodawanie nowego elementu listy zwiekszy jej wielkosc
+
+outerHTML -  zamienia całe pole na coś ( łądznie z tagami)
+innerHTML - zamienia zawartość w jakims tagu / uważać aby użytkownik nic tutaj nie wpisywał bo nam coś zjebie
+innerText - pobiera zawartość tekstu z CSS
+textContent - pobiera zawartość tekstu bez CSS
+
+<nazwa elementu>.appendChild(<co dodajemy>) - dodannie np diva do jakiegos innego diva z jakas klasa
+
+addEventListener
+Nazwa	Opis
+click	Wykrywa kliknięcie myszą na element, zdecydowanie najczęściej wykorzystywany event
+copy	Wykrywa kopiowanie treści (CMD + C / CTRL + C / PPM -> kopiuj)
+keydown	Klawisz na klawiaturze został wciśnięty (ale nie puszczony)
+keyup	Klawisz na klawiaturze został puszczony
+mousemove	Kursor porusza się po elemencie
+mouseover	Kursor znajduje się nad elementem, podobne do :hover w CSS
+mouseenter	Kursor wjechał na element
+mouseleave	Kursor zjechał z elementu
+scroll	Wykrywa zdarzenie scrolla (przewijania strony)
+DOMContentLoaded	Strona internetowa została wczytana (sam DOM, bez CSS, grafik itd.)
+load	Cała strona internetowa została wczytana (DOM, CSS, grafiki itd.)
+Seria eventów 'drag’	Dragstart, dragend itd.
+Dzięki nim możemy za pomocą myszy przenosić elementy.
+
+Bubbling: jakis event idzie od dziecka do rodzica (np.  od jakiegos diva do window)
+Capturing: jakis event idzie od rodzica do  dziecka(z window do najbardziej oddalonego np.diva )
+
+<jakis_elemet>.classList.toogle('<nazwa klasy>') tak mozemu dodawac i usuwac klase na zmiane
+<jakis_elemet>.classList.add('<nazwa klasy>') dodajemy klase
+<jakis_elemet>.classList.remove('<nazwa klasy>') usuwamy klase
+
+setTimeout(<cos np funkcja>, <czas w ms>) - opoznie wykonanie polecenia o podany czas
+setInterval(<cos np funkcja>, <czas w ms>) - wykonuje polecenie w podanym interwale czasowym
+
+alert(<tekst>)  - po prostu alert
+confirm(<jakis tekst>) - to mozna opakowac w ifa i wten sposob wykonac jakas akcje w zaleznosci od wybranej opcji
+prompt(<jakis tekst>) -  alert, ale tutaj mozemy cos wpisac
+
+<nazwa elementu>.setAtribute(<atrybut>, <zawartosc>) - dodanie atrybutu do elementu
+<nazwa elementu>.getAtribute(<atrybut>) - zwraca zawartosc atrybutu, albo null jęsli go nie ma
+<nazwa elementu>.hasAtribute(<atrybut>) - sprawdza czy znajduje sie atrybut
+<nazwa elementu>.removeAtribute(<atrybut>) - usuwa podany atrybut
+
+<nazwa elementu>.previousElementSibling - dostajemy sie do elementu ktory jest wczesniejszym bratem( nad tym elementem)
+<nazwa elementu>.nextElementSibling - dostajemy sie do elementu ktory jest późnjejszym bratem(pod tym elementem)
+<nazwa elementu>.parentElement - dostajemy sie do elementu ktory jest rodzicem
+<nazwa elementu>.closest(<nazwa elementu>) - poszukuje najbliższego elementu który pasuje do tego co podaliśmy jako argument
