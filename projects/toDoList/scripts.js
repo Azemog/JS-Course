@@ -34,6 +34,8 @@ const prepareDomEvents = () => {
     ulList.addEventListener('click', checkClick);
     popupCloseBtn.addEventListener('click', closeEdit)
     popupAddBtn.addEventListener('click', editToDoText)
+    popupInput.addEventListener('keyup', enterKeyCheck)
+    todoInput.addEventListener('keyup', enterKeyCheck)
    
 };
 
@@ -113,6 +115,17 @@ const deleteToDo = (e) =>{
         errorInfo.innerHTML = 'Brak zadań do wykonania'
     }
 
+}
+
+const enterKeyCheck = (e) =>{
+    console.log(e.target.classList);
+    if(e.key === 'Enter'){
+        if(e.target.classList.contains('todo-input'))
+        addTask()
+        else{
+        editToDoText()
+        }
+    }
 }
 
 
