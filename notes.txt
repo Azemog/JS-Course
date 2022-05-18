@@ -68,3 +68,17 @@ prompt(<jakis tekst>) -  alert, ale tutaj mozemy cos wpisac
 <nazwa elementu>.nextElementSibling - dostajemy sie do elementu ktory jest późnjejszym bratem(pod tym elementem)
 <nazwa elementu>.parentElement - dostajemy sie do elementu ktory jest rodzicem
 <nazwa elementu>.closest(<nazwa elementu>) - poszukuje najbliższego elementu który pasuje do tego co podaliśmy jako argument
+
+this w funkcji strzałkowej wskazuje na window, a nie na np objekt w którym się znajduje
+
+<nazwa funkcji>.call(<nazwa obiektu>, argument1, argument2...) - to pozwala na użycie this w funkcji
+<nazwa funkcji>.apply(<nazwa obiektu>, [argument1, argument2...]) - to samo tylko musimy podać tablicę
+const movie ={
+    name: "Avengers"
+}
+
+function show(price,cinema){
+    console.log(`Film: ${this.name}, cena: ${price}, kino: ${cinema}`);
+}
+
+show.call(movie, 32, "Multikino")
