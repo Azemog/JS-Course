@@ -8,13 +8,13 @@ const temperature = document.querySelector('.temperature');
 const humidity = document.querySelector('.humidity');
 
 const API_LINK = 'https://api.openweathermap.org/data/2.5/weather?q=';
-const token = config.MY_API_KEY;
-const API_KEY = `&appid=${token}`;
+const API_KEY = '&appid=' + config.MY_API_KEY;
 const API_UNITS = '&units=metric';
 
 const getWeather = () => {
 	const city = input.value || 'Warsaw';
 	const URL = API_LINK + city + API_UNITS + API_KEY;
+	console.log(URL);
 	axios.get(URL).then((res) => {
 		const temp = res.data.main.temp;
 		const hum = res.data.main.humidity;
